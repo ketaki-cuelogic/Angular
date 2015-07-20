@@ -1,0 +1,19 @@
+<div id="menubar">
+	  <div id="welcome">
+	    <h1><a href="#/home">Welcome...</a></h1>
+</div><!--close welcome-->
+<div id="menu_items">
+  <ul id="menu">
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/home')}"><a href="#/home">Home</a></li>
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/about')}"><a href="#/about">About</a></li>
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/careers')}"><a href="#/careers" >Careers</a></li>
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/clients')}"><a href="#/clients">clients</a></li>
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/doc')}"><a href="#/doc">Doc</a></li>
+    <li ng-class="{current:AssignMentCtrl.isCurrPage('/login')}" ng-if="!isLoggedIn">
+      <a href="#/login">Login</a>
+    </li>
+    <li ng-if="isLoggedIn">
+      <a href="javascript:void(0)" ng-click="AssignMentCtrl.logout()">Logout</a>
+    </li>
+  </ul>
+</div>

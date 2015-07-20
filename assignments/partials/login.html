@@ -1,0 +1,24 @@
+<div class="content_item">
+	<div class="sidebar">
+	  <div class="sidebar_item">
+		<h2>Login</h2>
+		<div class="form_settings">
+			<form name="frmLogin" ng-submit="frmLogin.$valid && LoginCtrl.login()" noValidate>
+				<p><input type="email" class="contact" name="userName" ng-model="LoginCtrl.user.userName" placeholder="User name" required/>
+				<span style="color:red" ng-show="frmLogin.userName.$dirty && frmLogin.userName.$invalid">
+					<span style="color:red" ng-show="frmLogin.userName.$error.required">*Required</span>
+					<span style="color:red" ng-show="frmLogin.userName.$error.email">*Invalid Username</span>
+				</span>
+				</p>
+				<p><input type="password" class="contact" name="password" ng-model="LoginCtrl.user.password" placeholder="Password" required/>
+				<span style="color:red" ng-show="frmLogin.userName.$dirty && frmLogin.userName.$invalid">
+					<span style="color:red" ng-show="frmLogin.userName.$error.required">*Required</span>
+				</span>
+				</p>
+				<p><input type="submit" class="submit" ng-disabled="!frmLogin.$valid" value="Login"></p>
+				<p><span style="color:red">{{ LoginCtrl.errMsg }}</span></p>
+			</form>
+		</div>
+	  </div> 
+	</div> 			  
+</div><!--close content_item-->
