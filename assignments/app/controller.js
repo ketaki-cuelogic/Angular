@@ -11,6 +11,7 @@ app.controller( 'AssignmentController', function( $scope, $rootScope, $location 
 });
 
 app.controller( 'LoginController', function( $scope, $rootScope, $location ){
+	
 	this.user 	= {};
 	this.errMsg	= '';
 	this.login = function(){
@@ -37,7 +38,7 @@ app.controller( 'HelloController', ['serviceAlert', 'serviceFlashMsg', function(
 	this.flashMsg = function( msg ) {
 		serviceFlashMsg( msg );
 	};
-	
+
 }]);
 
 app.controller( 'CareersController', function(){
