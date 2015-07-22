@@ -29,7 +29,7 @@ app.controller( 'LoginController', function( $scope, $rootScope, $location ){
 
 app.controller( 'HelloController', ['serviceAlert', 'serviceFlashMsg', function( serviceAlert, serviceFlashMsg ){
 	this.title = 'Hello world!!';
-	
+
 	this.notify = function( msg ){
 		serviceAlert.show( msg );
 	};
@@ -37,6 +37,7 @@ app.controller( 'HelloController', ['serviceAlert', 'serviceFlashMsg', function(
 	this.flashMsg = function( msg ) {
 		serviceFlashMsg( msg );
 	};
+	
 }]);
 
 app.controller( 'CareersController', function(){
