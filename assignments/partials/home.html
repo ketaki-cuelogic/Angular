@@ -3,6 +3,9 @@
 	  <div class="sidebar_item">
 		<h2>Assignment Hello World</h2>
 		<p>{{ HelloCtrl.title }}</p>
+		<p><input type="button" ng-click="HelloCtrl.notify( 'Hi there!' )" value="Click me to test show from serviceAlert factory"/></p>
+		<p><input type="button" ng-click="HelloCtrl.flashMsg( 'Hi there!' )" value="Click me to test serviceFlashMsg service"/></p>
+		<p><span id="flash_msg"></span></p>
 	  </div> 
 	</div> 			  
 </div><!--close content_item-->

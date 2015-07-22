@@ -27,9 +27,17 @@ app.controller( 'LoginController', function( $scope, $rootScope, $location ){
 	};
 });
 
-app.controller( 'HelloController', function(){
+app.controller( 'HelloController', ['serviceAlert', 'serviceFlashMsg', function( serviceAlert, serviceFlashMsg ){
 	this.title = 'Hello world!!';
-});
+	
+	this.notify = function( msg ){
+		serviceAlert.show( msg );
+	};
+
+	this.flashMsg = function( msg ) {
+		serviceFlashMsg( msg );
+	};
+}]);
 
 app.controller( 'CareersController', function(){
 });
